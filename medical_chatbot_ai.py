@@ -36,9 +36,8 @@ docs = text_splitter.split_documents(documents)
 # Embeddings
 embeddings = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2",
-    model_kwargs={'device': 'cpu'}
+    model_kwargs={'device': -1}   # -1 means CPU for SentenceTransformer
 )
-
 # Vector DB
 db = FAISS.from_documents(docs, embeddings)
 retriever = db.as_retriever()
