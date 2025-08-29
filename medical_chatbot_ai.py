@@ -65,7 +65,7 @@ def ask_bot(query):
     except Exception as e:
         return f"⚠️ Error: {str(e)}"
 
-pip install streamlit
+
 
 st.title("🚀 Medical ChatBot AI")
 user_input = st.text_input("Enter your medical question:")
