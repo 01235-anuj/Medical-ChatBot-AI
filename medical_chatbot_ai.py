@@ -11,7 +11,7 @@ Original file is located at
 !pip install langchain langchain-community faiss-cpu pypdf sentence-transformers transformers accelerate gradio
 
 # Imports
-import os
+import streamlit as st
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.vectorstores import FAISS
@@ -19,7 +19,9 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 from transformers import pipeline
 from langchain.llms import HuggingFacePipeline
 from langchain.chains import RetrievalQA
-import gradio as gr
+
+# No !pip install here 🚫
+
 
 from google.colab import files
 uploaded = files.upload()
