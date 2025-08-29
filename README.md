@@ -45,5 +45,5 @@ Below is a screenshot of the **Medical Chatbot (PDF-based)** interface.
 
 ⚠️ *Note: This chatbot provides answers based on the uploaded medical PDF. It is not a substitute for professional medical advice.*
 
-![Chatbot Screenshot](<img width="2939" height="1653" alt="image" src="https://github.com/user-attachments/assets/b2137f04-1f59-468d-93e5-f885c62d52d7" />
-)
+<img width="2939" height="1653" alt="image" src="https://github.com/user-attachments/assets/b2137f04-1f59-468d-93e5-f885c62d52d7" />
+
