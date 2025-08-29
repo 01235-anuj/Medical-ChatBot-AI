@@ -22,11 +22,11 @@ from langchain.chains import RetrievalQA
 # No !pip install here 🚫
 
 
-from google.colab import files
+
 PDF_FILE = "Medical_Book.pdf"
 
 # Load PDF
-loader = PyPDFLoader(pdf_path)
+loader = PyPDFLoader(PDF_FILE)
 documents = loader.load()
 
 # Split text into chunks (smaller to avoid >512 token input)
