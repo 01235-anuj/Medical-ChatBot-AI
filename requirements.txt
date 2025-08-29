@@ -1,9 +1,6 @@
 streamlit==1.36.0
-torch==2.2.2
-sentence-transformers==2.2.2
-transformers==4.40.1
-accelerate==0.27.2
 langchain==0.2.14
 langchain-community==0.2.12
-faiss-cpu==1.7.4
 pypdf==4.2.0
+faiss-cpu==1.7.4
+huggingface-hub==0.23.4
