@@ -33,22 +33,17 @@ documents = loader.load()
 text_splitter = CharacterTextSplitter(chunk_size=200, chunk_overlap=50)
 docs = text_splitter.split_documents(documents)
 
-# Embeddings
-embeddings = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2",
-    model_kwargs={'device': -1}   # -1 means CPU for SentenceTransformer
-)
-# Vector DB
-db = FAISS.from_documents(docs, embeddings)
-retriever = db.as_retriever()
+from langchain_community.embeddings import HuggingFaceHubEmbeddings
+from langchain_community.llms import HuggingFaceHub
 
-# Load Hugging Face model locally (no API calls)
-generator = pipeline(
-    "text2text-generation",
-    model="google/flan-t5-large",
-    max_length=512,
-    device=-1   # -1 = CPU, 0 = GPU
+# Requires Hugging Face API key in Streamlit secrets
+embeddings = HuggingFaceHubEmbeddings(model="sentence-transformers/all-MiniLM-L6-v2")
+
+llm = HuggingFaceHub(
+    repo_id="google/flan-t5-large",
+    model_kwargs={"temperature": 0.1, "max_length": 512}
 )
+
 
 
 # Wrap pipeline into LangChain
