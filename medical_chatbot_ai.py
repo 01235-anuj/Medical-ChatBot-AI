@@ -34,7 +34,10 @@ text_splitter = CharacterTextSplitter(chunk_size=200, chunk_overlap=50)
 docs = text_splitter.split_documents(documents)
 
 # Embeddings
-embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+embeddings = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/all-MiniLM-L6-v2",
+    model_kwargs={'device': 'cpu'}
+)
 
 # Vector DB
 db = FAISS.from_documents(docs, embeddings)
@@ -45,8 +48,9 @@ generator = pipeline(
     "text2text-generation",
     model="google/flan-t5-large",
     max_length=512,
-    device=0  # CPU (set 0 if GPU is available)
+    device=-1   # -1 = CPU, 0 = GPU
 )
+
 
 # Wrap pipeline into LangChain
 llm = HuggingFacePipeline(pipeline=generator)
