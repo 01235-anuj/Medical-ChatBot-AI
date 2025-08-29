@@ -23,8 +23,7 @@ from langchain.chains import RetrievalQA
 
 
 from google.colab import files
-uploaded = files.upload()
-pdf_path = list(uploaded.keys())[0]
+PDF_FILE = "Medical_Book.pdf"
 
 # Load PDF
 loader = PyPDFLoader(pdf_path)
