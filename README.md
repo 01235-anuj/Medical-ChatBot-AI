@@ -1,8 +1,15 @@
 # 🏥 Medical ChatBot AI  
 
 ## 📌 Project Overview  
-This project is a simple **Medical Chatbot** built with **Gradio**.  
-The chatbot provides an easy-to-use interface where users can ask health-related questions and get AI-generated responses.  
+
+The **Medical ChatBot AI** is a PDF-based conversational assistant designed to answer medical questions directly from uploaded documents.  
+It uses **Natural Language Processing (NLP)** and **Machine Learning models** to extract information from medical texts and provide concise, relevant answers.  
+
+With a simple **Gradio-powered interface**, users can upload a medical PDF (such as the *Gale Encyclopedia of Medicine*) and interact with it in real-time by asking natural language questions.  
+
+⚠️ *This chatbot is meant for **educational and informational purposes only** and should not be considered a substitute for professional medical advice.*  
+
+---
 
 ---
 
