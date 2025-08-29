@@ -8,7 +8,6 @@ Original file is located at
 """
 
 # Install dependencies
-!pip install langchain langchain-community faiss-cpu pypdf sentence-transformers transformers accelerate gradio
 
 # Imports
 import streamlit as st
