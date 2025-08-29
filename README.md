@@ -14,15 +14,24 @@ With a simple **Gradio-powered interface**, users can upload a medical PDF (such
 ---
 
 ## 🚀 Features  
-- 💬 Interactive chatbot built with **Gradio**.  
-- 🏥 Provides AI-based responses to medical queries.  
-- 🌐 Simple web interface that runs locally or can be deployed online.  
+- 💬 **Interactive Chatbot** – Built with Gradio for an easy-to-use interface.  
+- 🏥 **Medical Query Support** – Provides AI-based responses to health-related questions.  
+- 📄 **PDF-based Knowledge** – Can be extended to answer from uploaded medical documents.  
+- ⚡ **Real-time Processing** – Generates answers instantly.  
+- 🌐 **Cross-platform** – Runs locally on your machine or can be deployed online (Hugging Face Spaces, Streamlit Cloud, or Docker).  
+- 🔒 **Customizable** – Easily switch to different models or datasets.  
+- 🧠 **Extendable** – Future-ready for integration with advanced LLMs (BioBERT, PubMedBERT).  
 
 ---
 
 ## 🛠️ Technologies Used  
-- **Python**  
-- **Gradio**  
+- **Python 3.x** – Core programming language.  
+- **Gradio** – For building the chatbot’s web-based user interface.  
+- **Transformers (Hugging Face)** – For natural language understanding and generation.  
+- **Sentence Transformers** – For generating vector embeddings (if using PDF-based RAG).  
+- **FAISS** – Vector database for fast similarity search (optional, when PDFs are used).  
+- **PyPDF** – Extracting text content from PDF files.  
+- **LangChain** – For RetrievalQA and chaining model responses (optional if you used it).  
 
 ---
 
